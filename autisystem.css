@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family: sans-serif;
+
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.papai {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- LADO ESQUERDO CORRIGIDO --- */
+.ladoleft {
+    background-color: blue;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    /* Centraliza tudo verticalmente */
+    justify-content: space-between; 
+    
+    /* Alinha tudo horizontalmente no centro (ou flex-start / flex-end) */
+    align-items: flex; 
+}
+
+
+.link-foto {
+    align-self: flex-start; 
+    margin-left: 20px; /* Margem para não colar na borda da tela */
+}
+
+
+/* Se quiser mexer apenas no link <a> individualmente */
+.ladoleft a {
+    color: white;
+    text-decoration: none;
+    margin-top: 20px; /* Dá um espaço entre o H1 e o Link */
+}
+
+/* Se quiser mexer apenas no h1 individualmente */
+.ladoleft h1 {
+    color: white;
+    /* text-align center garante que o texto interno não quebre estranho */
+    text-align: center;
+}
+
+.link-texto {
+    align-self: flex-start;
+    color: white;
+    font-size: small;
+}
+
+
+
+
+/* --- LADO DIREITO (Já estava bom!) --- */
+.ladoright {
+    background-color: #00000021;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+}
+
+.rightlogin{
+    background-color: rgba(143, 178, 166, 0.23);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+
+
+
+    display: flex;
+    flex-direction: column;  /* Deixa os itens um embaixo do outro */
+    max-width: 350px;
+}
+
+.container-login label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    align-self: flex-start; /* Alinha o texto do label à esquerda do card */
+}
+
+.rightlogin input{
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+
+.login{
+    color: #ccc;
+background-color: #18a622;
+}
