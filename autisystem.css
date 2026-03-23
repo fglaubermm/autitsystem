@@ -24,17 +24,17 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+
     /* Centraliza tudo verticalmente */
-    justify-content: space-between; 
-    
+    justify-content: space-between;
+
     /* Alinha tudo horizontalmente no centro (ou flex-start / flex-end) */
-    align-items: flex; 
+    align-items: flex;
 }
 
 
 .link-foto {
-    align-self: flex-start; 
+    align-self: flex-start;
     margin-left: 20px; /* Margem para não colar na borda da tela */
 }
 
@@ -68,7 +68,7 @@ html, body {
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -101,3 +101,54 @@ border-radius: 5px;
     color: #ccc;
 background-color: #18a622;
 }
+
+
+
+/* FIM DO SEU CSS NORMAL */
+
+@media (max-width: 768px) {
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        font-family: sans-serif;
+
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+    .papai {
+        display: flex; /* Precisa ser flex para o order funcionar */
+        flex-direction: column;
+        background-color: #25ca82;
+    }
+
+    /* Isso faz as divs "sumirem" para o layout, sobrando só o conteúdo */
+    .ladoleft, .ladoright, .rightlogin {
+        display: contents; 
+    }
+
+    /* Agora todos esses podem ser ordenados entre si! */
+    .link-foto   { order: 1; }
+
+    .slogan      { order: 2;}
+
+
+
+
+
+
+    .rightlogin form { order: 3;
+     background-color: rgba(143, 178, 166, 0.23);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgb(0, 0, 0); } 
+
+    .link-texto  { order: 4;}
+}
+
