@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-        font-family: sans-serif;
+    font-family: sans-serif;
 
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -35,7 +36,8 @@ html, body {
 
 .link-foto {
     align-self: flex-start;
-    margin-left: 20px; /* Margem para não colar na borda da tela */
+    margin-left: 20px;
+    /* Margem para não colar na borda da tela */
 }
 
 
@@ -43,7 +45,8 @@ html, body {
 .ladoleft a {
     color: white;
     text-decoration: none;
-    margin-top: 20px; /* Dá um espaço entre o H1 e o Link */
+    margin-top: 20px;
+    /* Dá um espaço entre o H1 e o Link */
 }
 
 /* Se quiser mexer apenas no h1 individualmente */
@@ -72,7 +75,7 @@ html, body {
     min-height: 100vh;
 }
 
-.rightlogin{
+.rightlogin {
     background-color: rgba(143, 178, 166, 0.23);
     padding: 30px;
     border-radius: 15px;
@@ -81,25 +84,28 @@ html, body {
 
 
     display: flex;
-    flex-direction: column;  /* Deixa os itens um embaixo do outro */
+    flex-direction: column;
+    /* Deixa os itens um embaixo do outro */
     max-width: 350px;
 }
 
 .container-login label {
     margin-top: 10px;
     margin-bottom: 5px;
-    align-self: flex-start; /* Alinha o texto do label à esquerda do card */
+    align-self: flex-start;
+    /* Alinha o texto do label à esquerda do card */
 }
 
-.rightlogin input{
-padding: 8px;
-border: 1px solid #ccc;
-border-radius: 5px;
+.rightlogin input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.login{
+.login {
     color: #ccc;
-background-color: #18a622;
+    background-color: #18a622;
+    cursor: pointer;
 }
 
 
@@ -109,46 +115,69 @@ background-color: #18a622;
 @media (max-width: 768px) {
 
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: sans-serif;
 
-}
+    }
 
-html, body {
-    width: 100%;
-    height: 100%;
-}
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
 
 
     .papai {
-        display: flex; /* Precisa ser flex para o order funcionar */
+        display: flex;
         flex-direction: column;
-        background-color: #25ca82;
+        background-color: #0e8ce7;
+        align-items: center;
+        /* Mantém o slogan e form no centro horizontal */
+        justify-content: flex-start;
+        /* Alinha tudo começando do topo */
+        min-height: 100vh;
     }
 
     /* Isso faz as divs "sumirem" para o layout, sobrando só o conteúdo */
-    .ladoleft, .ladoright, .rightlogin {
-        display: contents; 
+    .ladoleft,
+    .ladoright,
+    .rightlogin {
+        display: contents;
     }
 
     /* Agora todos esses podem ser ordenados entre si! */
-    .link-foto   { order: 1; }
+    .link-foto {
+        order: 1;
+        align-self: flex-start;
+        margin-bottom: 50px;
+        /* Dá o espaço entre a logo e o slogan */
+    }
 
-    .slogan      { order: 2;}
+    .slogan {
+        order: 2;
+    }
 
 
 
+    .rightlogin form {
 
+        order: 3;
+        background-color: rgba(143, 178, 166, 0.23);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgb(0, 0, 0);
+        width: 90%;
+        /* Ocupa 90% da largura da tela */
+        max-width: 350px;
+    }
 
+    .login {
+        cursor: pointer;
+    }
 
-    .rightlogin form { order: 3;
-     background-color: rgba(143, 178, 166, 0.23);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgb(0, 0, 0); } 
-
-    .link-texto  { order: 4;}
+    .link-texto {
+        order: 4;
+    }
 }
-
